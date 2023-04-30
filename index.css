@@ -1,0 +1,706 @@
+/* CSS Variables */
+:root {
+  --color-primary: rgb(0, 174, 255);
+  --text-color: #fff;
+}
+
+/* Reset padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem = 10px, 10px/16px = 62.5%*/
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: var(--color-primary);
+  align-items: center;
+}
+
+.nav__header {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav__list li {
+  color: var(--text-color);
+  font-size: 1.5rem;
+
+  /* border-right: 1px solid var(--text-color); */
+}
+.nav__list .nav__contact{
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+.nav__list .fa-whatsapp{
+color: green;
+font-size: 4rem;
+}
+
+.nav__list .nav__icon-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rems;
+}
+
+.nav__list li:not(:last-child) {
+  border-right: 1px solid var(--text-color);
+}
+
+/* dropdown */
+.dropbtn {
+  /* background-color: #4caf50; */
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+  display: none;
+  width: fit-content;
+  background-color: #fff;
+  color: #4f4f4f;
+  position: absolute;
+  top: 6rem;
+  padding: 1rem 1rem;
+  right: 5rem;
+  z-index: 1;
+}
+
+/* .dropdown-content::before {
+  content: <i
+  background-color: red;
+  position: absolute;
+  top: -2rem;
+  width: 5rem;
+} */
+
+.content-desc {
+  color: #4f4f4f;
+  font-size: 1.2rem;
+}
+
+.content-signup {
+  margin-top: 1rem;
+}
+
+.content-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 39px;
+  border: none;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--color-primary);
+}
+
+.btn-signup {
+  display: inline-block;
+}
+/* Show the dropdown content when the dropdown button is clicked */
+.show {
+  display: block;
+}
+
+/* Hero */
+
+.hero {
+  /* background-image: url("https://static.hotels.ng/v7/img/v7-homepage1.jpg"); */
+  background-image: url("https://static.hotels.ng/v7/img/v7-homepage1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+}
+
+.hero__text-box {
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(10rem);
+  color: var(--text-color);
+  /* width: 50%; */
+}
+
+.hero__header {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.hero__paragraph {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.hero__form {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 17rem;
+  box-shadow: var(--shadow-box);
+  height: 13rem;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  transform: translateY(4rem);
+}
+.formBtn  {
+  border: none;
+  background-color: var(--color-primary);
+  padding: 1.3rem 4rem;
+  color: var(--text-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.form__input {
+  /* display: block; */
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: inherit;
+  padding: 1.25rem 1.75rem;
+  border: none;
+  width: 40rem;
+  background-color: #fff;
+  background-color: #f2f2f2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form__input:focus {
+  outline: none;
+  border: 1px solid var(--color-primary);
+}
+
+/* DESTINATION */
+.section-heading {
+  padding:0;
+  text-align: center;
+}
+
+/* SUGGESTED DESTINATIONIN NIGERIA */
+.destination {
+  padding: 15rem 0;
+  text-align: center;
+  color: var(--text-color-dark);
+  /* margin: 15rem; 
+   background-color: red;  */
+ }
+
+.destination-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color-dark);
+} 
+
+.par {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.destination-divider {
+  width: 5rem;
+  background-color: var(--color-primary);
+  height: 3px;
+  margin: 1.2rem auto;
+}
+.destination-container-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(3.5rem);
+}
+
+.destination-container-card .card {
+  flex-basis: 15rem;
+  border: 0.2rem solid var(--color-primary);
+  padding: 1rem 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  /* color: var(--color-primary); */
+  transition: all 0.8s;
+}
+.destination-container-card .card-header {
+  font-size: 1.9rem;
+  color: var(--color-primary);
+}
+.destination-container-card .card-caption {
+  font-size: 1.2rem;
+  color: var(--text-color-dark);
+  font-weight: 300;
+}
+.destination-container-card .card:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+/* 
+HOTELS SECTION */
+
+.topHotels {
+  padding: 0 15rem;
+}
+
+
+.headings {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color-dark);
+} 
+
+.para {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.divider {
+  width: 5rem;
+  background-color: var(--color-primary);
+  height: 3px;
+  margin: 1.2rem auto;
+}
+.topHotels .row1 {
+  display: flex;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.topHotels .row2 {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rems; 
+  }
+  .topHotel .row2 {
+    margin-top: -1rem;
+  }
+
+  .top-hotel {
+    flex-basis: 33.3%;
+    text-align: left;
+    transition: box-shadow ease-in 0.3s;
+  }
+  .top-hotel-img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .top-hotel-img:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4); 
+    box-shadow: var(--shadow-box);  
+  }
+  
+
+  .title {
+    font-size: 1.8rem;
+    color: #00aeff;
+    padding-right: 2rem;
+  }
+  
+  .caption {
+    color: var(--text-color-dark);
+    font-size: 1.3rem;
+  }
+
+  .top-hotel .discount {
+    background-color: orange;
+    transform: translateY(-31rem);
+    margin-left: -1rem;
+    width: 45%;
+    color: var(--text-color);
+    text-align: center;
+    padding: 2px 1px 1px 1p
+  }
+
+  .top-hotel .detail {
+    padding: 1rem;
+    border: 0.5px solid #bdbdbd;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .top-hotel .discount > div {
+    position: relative;
+  }
+
+  .discount .listing {
+    font-size: 1.5rem;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .discount .listing span {
+    font-size: 1.6rem;
+    font-weight: 900;
+    /* margin: 0 10px; */
+  }
+  
+  .top-hotel .discount .slant {
+    position: absolute;
+    bottom: 0.6rem;
+  }
+  .top-hotel .discount .slant::before {
+    content: "";
+    background-color: orange;
+    width: 1rem;
+    display: block;
+    position: absolute;
+    height: 1.2rem;
+    transform: skewY(30deg);
+    transform-origin: 100% 70%;
+  }
+
+  /* POPULAR CITIES */
+.cities {
+  margin-bottom:10rem ;
+}
+
+.cities .row1{
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+}
+
+.cities .row1 .cities-card {
+  /* overflow: hidden; */
+  transition: all ease-in 0.5s;
+  height: 24rem;
+  /* transition: all 6s; */
+  transition: all 0.6s ease-in;
+  cursor: pointer;
+}
+
+.cities .row1 .cities-card:hover .layer {
+  opacity: 1;
+}
+
+.rows .imG {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 1rem;
+}
+
+.cities-card .details {
+  position: relative;
+  top: -18rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.cities-card .details h3 {
+  font-size: 2rem;
+  /* color: #00aeff; */
+}
+
+.cities-card .layer {
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-14.1rem);
+  border-radius: 0px 0px 4px 4px;
+  transition: all 0.7s;
+  opacity: 0;
+}
+
+.cities-card .layer .Caption {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  border: 1.8px solid #fff;
+  transform: translateY(2.5rem);
+  transition: all 0.7s;
+}
+
+.cities-card .layer .Caption:hover {
+  background-color: var(--color-primary);
+  border: none;
+}
+.cities-card .details p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* color: red; */
+}
+
+/* Which City Do You Want To Book A Hotel ? */
+
+
+ .row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  gap: 7rem;
+  margin-top: 3rem;
+  
+}
+
+ /* .row {
+  display: flex ;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 18rem; 
+ }
+ */
+.book-hotels__card .card__header {
+  font-size: 1.8rem;
+  color: #00aeff;
+}
+
+.book-hotels__card .card__caption {
+  font-size: 1.4rem;
+}
+
+
+/* SPECIAL HOTEL DEALS AND OFFER */
+
+.special-deals {
+  background-color: #fafafa;
+  text-align: center;
+  padding: 4rem 0;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  color: var(--text-color-dark);
+}
+
+.special-deals .special-deals__header {
+  font-size: 2.4rem;
+}
+
+.special-deals .special-deals__paragraph {
+  font-size: 1.6rem;
+}
+
+.special-deals__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 1rem;
+}
+
+
+/* .special-deals__form .form__group {
+  width: 100%;
+} */
+
+.special-deals__form .form__input {
+  border: 1px solid #bdbdbd;
+  width: 35%;
+  height: 4rem;
+  background-color: var(--text-color);
+  outline: transparent;
+}
+
+.special-deals__form .form__input:focus {
+  border: 1px solid var(--color-primary);
+}
+
+.feature{
+padding: 6rem 0;
+color:var(--text-color-dark) ;
+background-color: var(--text-color);
+}
+
+.feature__row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 6rem;
+}
+
+/* Get More Bookings for Your Hotel */
+.bookings {
+  padding: 6rem;
+  color: var(--text-color-dark);
+  margin-bottom: 5rem;
+}
+
+.get-app{
+  padding: 6rem 0;
+  background-color: #eff8fb;
+}
+
+.get-app__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.get-app__header {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #2196f3;
+}
+
+.get-app__col h3 {
+  font-size: 2.4rem;
+  color: #4f4f4f;
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+
+.get-app__col p {
+  margin-top: 1rem;
+  color: #4f4f4f;
+  font-weight: 500;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Enter your email addres */
+.notification{
+  background-color: #084482;
+  padding: 3rem 15rem; 
+}
+
+.notification .row1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.notification-col h3{
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.notification-col p{
+  color: #00aeff;
+  font-size: 1.5rem;
+}
+
+.notification-form{
+  width: 50%;
+}
+.notification-form  form{
+  width: 100%;
+}
+.Ninput{
+  width: 50%;
+  padding: 0 10px;
+  border-radius: 4px 0 0 4px;
+  border: 0;
+  color: #4f4f4f;
+  height: 41px;
+  margin-bottom: 0;
+  outline: none;
+}
+ 
+.N-btn{
+  border-radius: 0 4px 0 4px 0;
+  width: 30%;
+  margin-left: -6px;
+  color: #fff;
+  background-color: #00aeff;
+  border: 0;
+  transition: 0.3s ease-in-out;
+  height: 41px;
+  outline: none;
+  margin-bottom: 0;}
+
+  /* FOOTER */
+.footer{
+  text-align: left;
+  margin-bottom: 5rem;
+  margin-top: 0;
+  padding: 5rem;
+}
+
+.footer .row1{
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.footer-col h4{
+  color:  #9fa7ad;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e2e6e9;
+
+}
+h4{
+  display: flex;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e2e6e9;
+
+}
+
+
+.footer-list{
+  list-style: none;
+
+}
+
+.item{
+  padding: 1px 0;
+}
+
+.link{
+  color:#14b3f4 ;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.sub-footer{
+  display: inline-block;
+  margin-top: 15px;
+  padding-bottom: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #e2e6e9;
+  color: #657279;
+  font-size: 16px;
+}
+
+.sub-footer .footer-social-icons{
+  display: inline-block;
+  margin-left: 10px;
+  
+}
